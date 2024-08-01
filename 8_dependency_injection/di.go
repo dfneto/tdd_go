@@ -1,13 +1,13 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
+	"io"
 	"os"
 )
 
-func Greet(buffer *bytes.Buffer, name string) {
-	fmt.Fprintf(buffer, "Hello, %s", name)
+func Greet(writer io.Writer, name string) {
+	fmt.Fprintf(writer, "Hello, %s", name)
 }
 
 func main() {
